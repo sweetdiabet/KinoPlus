@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "../node_modules/vue-good-table/src/styles/style.scss";
+
+* {
+  @apply transition-colors ease-out duration-100;
+}
+
+::selection {
+  @apply bg-app-300 text-white;
+}
+
+.ui-button {
+  @apply flex flex-row font-semibold bg-app-400 text-center py-2 px-4 text-app-50 gap-2 items-center justify-center;
+  &:hover {
+    @apply bg-app-300;
+  }
+}
+
+.ui-input {
+  @apply bg-background-50 p-2 text-app-400;
+}
+
+.vgt-wrap.green {
+  @apply overflow-hidden;
+  .vgt-inner-wrap {
+    @apply shadow-none;
+  }
+  .vgt-table.green {
+    @apply border-none bg-background-800 bg-opacity-10;
+    thead th {
+      background: none;
+      @apply bg-background-700 bg-opacity-70 text-background-50;
+    }
+    td {
+      @apply font-semibold text-background-200;
+    }
+    tr:nth-of-type(odd) {
+      @apply bg-background-100 bg-opacity-20;
+    }
+    .sortable {
+      button {
+        &::after {
+          border-bottom: 5px solid #fff;
+        }
+        &::before {
+          border-top: 5px solid #fff;
+        }
+      }
+    }
+  }
+}
